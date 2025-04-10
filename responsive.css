@@ -1,0 +1,86 @@
+/* --- Responsive Design --- */
+
+/* Tablet and smaller */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  .subsection-title { font-size: 1.5rem; }
+
+  .logo {
+      width: 220px; /* Adjust larger logo */
+  }
+
+  .header-content {
+      gap: 2rem; /* Reduce gap slightly */
+  }
+
+  .courts, .facilities, .promotions {
+      /* Force single column if auto-fit isn't enough */
+      grid-template-columns: 1fr;
+  }
+
+  .card {
+      padding: 1.5rem;
+  }
+
+  .modal img {
+      max-width: 95%;
+      max-height: 80%;
+  }
+   .modal-nav {
+        padding: 0.8rem 0.6rem;
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+    .modal-nav.prev { left: 5px; }
+    .modal-nav.next { right: 5px; }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+  .subsection-title { font-size: 1.3rem; }
+
+  .header-content {
+    flex-direction: column;
+    padding: 2rem 1rem; /* Keep decent padding */
+    gap: 1.5rem; /* Adjust gap for column layout */
+    min-height: auto; /* Let content define height */
+  }
+
+  .logo {
+    width: 200px; /* Adjust larger logo */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .header-text {
+    text-align: center; /* Center text */
+  }
+
+  .section, .section-alt {
+      padding: 2.5rem 0;
+  }
+
+   .btn {
+       padding: 0.8rem 1.5rem;
+       font-size: 0.9rem;
+   }
+   .btn-lg {
+       padding: 0.9rem 2rem;
+       font-size: 1rem;
+   }
+
+   .gallery {
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 1rem;
+   }
+
+   .footer-links a {
+       margin: 0 0.5rem;
+       display: inline-block;
+       margin-bottom: 0.5rem;
+   }
+}

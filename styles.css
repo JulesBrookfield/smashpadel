@@ -1,0 +1,757 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --primary-color: #2563eb; /* Blue */
+  --primary-dark: #1d4ed8;
+  --secondary-color: #10b981; /* Teal/Green */
+  --secondary-dark: #059669;
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+  --background-light: #f9fafb;
+  --background-white: #ffffff;
+  --border-color: #e5e7eb;
+  /* MODIFIED: Gradient with alpha for transparency */
+  --header-bg: linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(55, 65, 81, 0.85) 100%);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.75rem; /* Slightly larger radius */
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+ scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-light);
+  background-color: var(--background-light);
+  line-height: 1.7; /* Improved readability */
+  font-size: 16px;
+}
+
+/* --- Utility Classes --- */
+.container {
+  max-width: 1100px; /* Slightly wider container */
+  margin: 0 auto;
+  padding: 0 1rem; /* Consistent horizontal padding */
+}
+
+/* --- Header --- */
+header {
+  /* MODIFIED: Removed direct background */
+  color: var(--background-white);
+  padding: 0;
+  text-align: center;
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden;
+  border-bottom: 4px solid var(--primary-color); /* Accent border */
+}
+
+/* ADDED: Background image pseudo-element */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Ensure this URL is correct */
+  background-image: url('https://smashpadelindonesia.com/PXL_20250216_111147448.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* Adjust opacity */
+  filter: blur(3px); /* Adjust blur */
+  z-index: 0; /* Behind content and gradient */
+}
+
+.header-content {
+  position: relative; /* Ensure content is above ::before */
+  padding: 2rem 1rem; /* Header padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Space between logo and text */
+  z-index: 1; /* Above ::before */
+  /* ADDED: Apply the semi-transparent gradient overlay */
+  background: var(--header-bg);
+  min-height: 150px; /* Ensure header has minimum height */
+}
+
+.logo {
+  /* MODIFIED: Increased logo size */
+  width: 200px;
+  height: auto;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+  filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.3));
+  transition: transform var(--transition-speed) ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.header-text {
+  text-align: left;
+}
+
+header h1 {
+  font-size: 2.5rem; /* Larger title */
+  margin-bottom: 0.25rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  color: var(--background-white);
+}
+
+header .subtitle { /* Use class for subtitle */
+  font-size: 1.1rem;
+  color: #d1d5db; /* Keep light grey */
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-weight: 600; /* Semi-bold */
+  font-size: 1.2rem;
+  color: var(--secondary-color); /* Use secondary color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  position: relative;
+  margin-top: 0.25rem;
+  border-bottom: 2px solid var(--secondary-color); /* Underline */
+  padding-bottom: 2px;
+}
+
+/* --- Sections --- */
+.section {
+  padding: 4rem 0; /* Increased vertical spacing */
+}
+
+.section-alt { /* Alternate background for visual rhythm */
+  background-color: var(--background-white);
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section h2 {
+  color: var(--text-dark);
+  margin-bottom: 2rem; /* More space after heading */
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center; /* Center section headings */
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+/* Subtle underline effect for headings */
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.subsection-title {
+    font-size: 1.75rem;
+    color: var(--text-dark);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem; /* Consistent paragraph spacing */
+}
+
+strong { /* Style bold text slightly */
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--background-white);
+  padding: 2rem; /* More padding */
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color); /* Subtle border */
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card h3 {
+  margin-bottom: 1rem; /* Increased space below card title */
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.25rem;
+  display: flex; /* Align icon and text */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card .icon { /* Style icons within cards */
+    font-size: 1.5rem; /* Adjust icon size */
+    color: var(--primary-color);
+    line-height: 1; /* Prevent extra space */
+    flex-shrink: 0; /* Prevent icon shrinking */
+}
+
+/* --- Layout Grids (Courts, Facilities) --- */
+.courts, .facilities {
+  display: grid;
+  /* Adjust columns for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card { /* Special styling for the main courts card */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--background-white);
+}
+
+.feature-card h3, .feature-card .icon {
+    color: var(--background-white);
+}
+.feature-card p, .feature-card li {
+    color: #e0e7ff; /* Lighter text on dark background */
+}
+/* Style bullet points/icons in feature card */
+.feature-card .info-list li::before {
+    color: var(--secondary-color); /* Contrasting bullet */
+}
+.feature-card .info-list li .icon {
+     color: var(--secondary-color); /* Contrasting icon */
+}
+
+/* --- Lists (Info, Vision) --- */
+.info-list, .vision-list {
+  list-style: none;
+  padding-left: 0; /* Remove default padding */
+  margin: 1.5rem 0;
+}
+
+.info-list li, .vision-list li {
+  margin-bottom: 0.75rem; /* Consistent list item spacing */
+  display: flex;
+  align-items: flex-start; /* Align icon/bullet with start of text */
+  gap: 0.75rem; /* Space between icon/bullet and text */
+}
+
+/* Using icons defined in HTML spans */
+.info-list li .icon, .vision-list li .icon {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 2px; /* Fine-tune vertical alignment */
+  flex-shrink: 0;
+  width: 20px; /* Ensure consistent width */
+  text-align: center;
+  line-height: 1.2; /* Adjust line-height for icon if needed */
+}
+
+/* Style for lists without specific icons (fallback to bullet) */
+.info-list li:not(:has(.icon))::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 20px; /* Consistent width */
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vision-list li .icon {
+  color: var(--secondary-color); /* Use secondary color for vision list */
+}
+
+.info-list.compact li {
+    margin-bottom: 0.5rem; /* Tighter spacing for compact lists */
+}
+
+/* --- Specific Sections --- */
+
+.opening-countdown {
+  background-color: #fffbeb; /* Lighter yellow */
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin: 2.5rem auto; /* Increased margin */
+  border: 1px solid #fcd34d; /* Softer border */
+  max-width: 700px; /* Wider max-width */
+  box-shadow: var(--card-shadow);
+}
+
+.countdown-title {
+  color: #b45309; /* Darker amber */
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.founder-section {
+  margin: 2rem 0;
+}
+
+.founder-card {
+  /* Inherits general card styling */
+  /* Ensure hover effect is applied */
+}
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+
+.mission-card {
+  background: var(--background-white); /* Use white background */
+  color: var(--text-dark);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  box-shadow: var(--card-shadow);
+  border-left: 5px solid var(--secondary-color); /* Accent border */
+}
+
+.mission-card h3 {
+  color: var(--secondary-color); /* Use accent for title */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.mission-card p {
+    color: var(--text-light);
+}
+
+.quote {
+  font-style: italic;
+  padding: 1.5rem 2rem; /* More padding */
+  border-left: 4px solid var(--secondary-color);
+  margin: 2rem auto; /* Center quote */
+  background-color: var(--background-white);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  max-width: 800px; /* Limit width */
+  box-shadow: var(--card-shadow);
+}
+.quote p {
+    margin-bottom: 0; /* Remove bottom margin inside blockquote */
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.highlight-box {
+  background-color: #eef2ff; /* Lighter indigo */
+  border-left: 5px solid var(--primary-color);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  box-shadow: var(--card-shadow);
+}
+
+.highlight-box h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* --- Buttons --- */
+.btn { /* Base button class */
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-lg { /* Larger button variant */
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--background-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--background-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+   transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Center the main booking button in its section */
+#welcome .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 2.5rem auto 0 auto; /* Top margin and auto left/right */
+}
+
+/* --- Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger min size */
+  gap: 1.5rem; /* Increased gap */
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px; /* Slightly taller */
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border: 1px solid var(--border-color);
+}
+
+.gallery img:hover {
+  transform: scale(1.03); /* Zoom effect */
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* --- Promotions --- */
+.promotions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.promo-card {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  /* Inherits general card styles (background, shadow, border, transition) */
+   background: var(--background-white);
+   box-shadow: var(--card-shadow);
+   border: 1px solid var(--border-color);
+   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.promo-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: var(--card-shadow-hover);
+}
+
+.promo-card img {
+  width: 100%;
+  display: block;
+  height: auto; /* Let image determine height */
+  aspect-ratio: 16 / 10; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color); /* Separate image slightly */
+}
+
+/* Removed image scaling on hover to let card lift */
+/* .promo-card:hover img { transform: scale(1.05); } */
+
+.promo-overlay { /* Text overlay */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    opacity: 1;
+    transition: opacity var(--transition-speed) ease;
+    border-radius: 0 0 var(--border-radius) var(--border-radius); /* Match card bottom radius */
+}
+
+.promo-overlay h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.promo-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #e5e5e5;
+}
+.promo-overlay span { /* "View Details" text */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 1px;
+    color: var(--secondary-color);
+}
+
+/* --- Modals (Gallery & Promo) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker overlay */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 85%; /* Leave space for controls */
+  border-radius: 4px; /* Smaller radius for image */
+  display: block; /* Prevent extra space below image */
+  margin: auto; /* Center image if smaller than max */
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem; /* Larger close icon */
+  font-weight: bold;
+  color: #bbb; /* Grey color */
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 5px;
+  transition: color var(--transition-speed) ease;
+}
+
+.modal-close:hover {
+  color: #fff; /* White on hover */
+}
+
+.modal-nav { /* Previous/Next Buttons */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 1rem 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color var(--transition-speed) ease;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-nav.prev {
+    left: 15px;
+}
+
+.modal-nav.next {
+    right: 15px;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--text-dark); /* Darker footer background */
+  color: #9ca3af; /* Light grey text */
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem; /* More padding */
+  margin-top: 4rem; /* Space above footer */
+  border-top: 4px solid var(--primary-color);
+}
+
+.footer-logo {
+    width: 120px; /* Smaller logo in footer */
+    height: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+footer p {
+  margin-bottom: 0.75rem; /* Spacing for footer text */
+  font-size: 0.95rem;
+}
+footer p strong {
+    color: #e5e7eb; /* Slightly brighter white for title */
+}
+
+.footer-links {
+    margin: 1.5rem 0;
+}
+
+.footer-links a {
+  color: var(--secondary-color); /* Use secondary color for links */
+  text-decoration: none;
+  margin: 0 0.75rem; /* More space between links */
+  font-weight: 600;
+  transition: color var(--transition-speed) ease;
+}
+
+.footer-links a:hover {
+  color: #fff; /* White on hover */
+  text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #6b7280; /* Dimmer color for copyright */
+}
+
+
+/* --- Responsive Design --- */
+
+/* Tablet and smaller */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header .subtitle {
+    font-size: 1rem;
+  }
+  .tagline {
+      font-size: 1.1rem;
+  }
+
+  /* MODIFIED: Adjust logo size for tablets */
+  .logo {
+      width: 180px;
+  }
+
+  .section h2 {
+      font-size: 1.8rem;
+  }
+  .subsection-title {
+      font-size: 1.5rem;
+  }
+
+  .courts, .facilities, .promotions {
+      /* Force single column layout */
+      grid-template-columns: 1fr;
+  }
+
+  .card {
+      padding: 1.5rem; /* Slightly reduce card padding */
+  }
+
+  .modal img {
+      max-width: 95%;
+      max-height: 80%;
+  }
+   .modal-nav {
+        padding: 0.8rem 0.6rem;
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+    .modal-nav.prev { left: 5px; }
+    .modal-nav.next { right: 5px; }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem; /* Reduce gap */
+     /* Ensure gradient covers background on mobile */
+    background: var(--header-bg);
+  }
+
+  .logo {
+    /* MODIFIED: Adjust logo size for mobile */
+    width: 160px;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-text {
+    text-align: center; /* Center text on mobile */
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+   header .subtitle {
+    font-size: 0.9rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .section {
+      padding: 2.5rem 0; /* Reduce section padding */
+  }
+  .section-alt {
+       padding: 2.5rem 0;
+  }
+
+  .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+  }
+   .subsection-title {
+      font-size: 1.3rem;
+  }
+
+   .btn {
+       padding: 0.8rem 1.5rem;
+       font-size: 0.9rem;
+   }
+   .btn-lg {
+       padding: 0.9rem 2rem;
+       font-size: 1rem;
+   }
+
+   .gallery {
+       /* Keep auto-fit for flexibility, adjust minmax if needed */
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 1rem;
+   }
+
+   .footer-links a {
+       margin: 0 0.5rem; /* Less space between links */
+       display: inline-block; /* Prevent awkward line breaks */
+       margin-bottom: 0.5rem; /* Add space if they wrap */
+   }
+}

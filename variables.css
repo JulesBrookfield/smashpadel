@@ -1,0 +1,23 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --primary-color: #2563eb; /* Blue */
+  --primary-dark: #1d4ed8;
+  --secondary-color: #10b981; /* Teal/Green */
+  --secondary-dark: #059669;
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+  --text-white: #ffffff;
+  --background-light: #f9fafb;
+  --background-white: #ffffff;
+  --background-dark: #111827; /* Added dark bg variable */
+  --border-color: #e5e7eb;
+  /* Header overlay gradient - controls darkness */
+  --header-overlay-gradient: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(55, 65, 81, 0.8) 100%); /* Adjusted transparency */
+
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.75rem;
+  --transition-speed: 0.3s;
+
+  --font-primary: 'Montserrat', sans-serif;
+}

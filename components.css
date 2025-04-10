@@ -1,0 +1,380 @@
+/* --- Component Styles (Cards, Buttons, Lists, Gallery, Modals, etc.) --- */
+
+/* --- Cards --- */
+.card {
+  background: var(--background-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card h3 {
+  font-size: 1.25rem; /* Override base h3 size if needed */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card .icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Layout Grids for Cards */
+.courts, .facilities, .promotions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Special Card Variants */
+.feature-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--text-white);
+}
+
+.feature-card h3, .feature-card .icon {
+    color: var(--text-white);
+}
+.feature-card p, .feature-card li {
+    color: #e0e7ff;
+}
+.feature-card .info-list li::before,
+.feature-card .info-list li .icon {
+    color: var(--secondary-color);
+}
+
+.founder-card { /* Can inherit .card or add specific styles */
+    /* Example: Add specific padding if needed */
+    /* padding: 2.5rem; */
+}
+.founder-card:hover { /* Ensure hover is defined if not inheriting .card */
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.mission-card {
+  background: var(--background-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  box-shadow: var(--card-shadow);
+  border-left: 5px solid var(--secondary-color);
+}
+
+.mission-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem; /* Override base h3 size */
+}
+.mission-card p {
+    color: var(--text-light);
+}
+
+/* --- Lists (Info, Vision) --- */
+.info-list, .vision-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.info-list li, .vision-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.info-list li .icon, .vision-list li .icon {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.info-list li:not(:has(.icon))::before { /* Fallback bullet */
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vision-list li .icon {
+  color: var(--secondary-color);
+}
+
+.info-list.compact li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Specific Section Boxes --- */
+
+.opening-countdown {
+  background-color: #fffbeb;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin: 2.5rem auto;
+  border: 1px solid #fcd34d;
+  max-width: 700px;
+  box-shadow: var(--card-shadow);
+}
+
+.countdown-title {
+  color: #b45309;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.founder-section { /* Container for founder card */
+  margin: 2rem 0;
+}
+
+.quote {
+  font-style: italic;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--secondary-color);
+  margin: 2rem auto;
+  background-color: var(--background-white);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  max-width: 800px;
+  box-shadow: var(--card-shadow);
+}
+.quote p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.highlight-box {
+  background-color: #eef2ff;
+  border-left: 5px solid var(--primary-color);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  box-shadow: var(--card-shadow);
+}
+
+.highlight-box h3 {
+  color: var(--primary-dark);
+  font-size: 1.5rem; /* Override base h3 size */
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-primary); /* Ensure font */
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5; /* Ensure consistent height */
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+   transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Centered Button within specific section */
+#welcome .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 2.5rem auto 0 auto;
+}
+
+/* --- Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border: 1px solid var(--border-color);
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* --- Promotions Component --- */
+.promo-card { /* Inherits .card styles where applicable */
+  position: relative;
+  overflow: hidden; /* Ensure overlay stays contained */
+  cursor: pointer;
+}
+
+.promo-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.promo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    color: var(--text-white);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    opacity: 1;
+    transition: opacity var(--transition-speed) ease;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.promo-overlay h4 {
+    font-size: 1.2rem;
+    color: var(--text-white); /* Ensure contrast */
+    margin-bottom: 0.25rem;
+}
+.promo-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #e5e5e5;
+}
+.promo-overlay span { /* "View Details" */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 1px;
+    color: var(--secondary-color);
+}
+
+/* --- Modals (Gallery & Promo) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #bbb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 5px;
+  transition: color var(--transition-speed) ease;
+}
+
+.modal-close:hover {
+  color: var(--text-white);
+}
+
+.modal-nav { /* Previous/Next Buttons */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 1rem 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color var(--transition-speed) ease;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-nav.prev {
+    left: 15px;
+}
+
+.modal-nav.next {
+    right: 15px;
+}
