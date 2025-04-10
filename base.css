@@ -54,3 +54,10 @@ strong {
     color: var(--text-dark);
     font-weight: 600;
 }
+
+/* Added font-display: swap to ensure text remains visible during web font load */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+  font-display: swap;
+}
