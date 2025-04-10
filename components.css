@@ -133,6 +133,9 @@
   border: 1px solid #fcd34d;
   max-width: 700px;
   box-shadow: var(--card-shadow);
+  width: 100%; /* P529a */
+  height: auto; /* P529a */
+  min-height: 200px; /* P14a2 */
 }
 
 .countdown-title {
