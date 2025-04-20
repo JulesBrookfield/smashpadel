@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 75 205">
+  <!-- Main property outline -->
+  <polygon points="45,179 0,179 0,0 8,0 8,81 44.6,81 45,179" fill="none" stroke="red" stroke-width="1.5"/>
+  
+  <!-- Grey dashed box - parking (expanded to full 45m width, inset from property line) -->
+  <rect x="1" y="82" width="43" height="25" fill="none" stroke="grey" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <!-- Entrance/exit lane on left side -->
+  <!-- (6m wide driving lane on left side) -->
+  
+  <!-- Parking spaces - Column 1 -->
+  <rect x="7" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="10" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="13" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="16" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="19" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="22" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="25" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="28" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="31" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="34" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="37" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="40" y="84" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  
+  <!-- Main horizontal driving lane -->
+  <!-- (space from y=89 to y=92) -->
+  
+  <!-- Parking spaces - Column 2 -->
+  <rect x="7" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="10" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="13" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="16" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="19" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="22" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="25" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="28" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="31" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="34" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="37" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="40" y="92" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+
+  <!-- Main horizontal driving lane -->
+  <!-- (space from y=97 to y=100) -->
+  
+  <!-- Parking spaces - Column 3 -->
+  <rect x="7" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="10" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="13" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="16" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="19" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="22" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="25" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="28" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="31" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="34" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="37" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  <rect x="40" y="100" width="2.5" height="5" fill="none" stroke="grey" stroke-width="0.3"/>
+  
+  <!-- Parking label with capacity -->
+  <text x="26" y="90.5" font-size="4" text-anchor="middle">Parking</text>
+  <text x="26" y="98.5" font-size="3.5" text-anchor="middle">43m × 25m</text>
+  <text x="26" y="105.5" font-size="3.5" text-anchor="middle">(36 cars)</text>
+  
+  <!-- Green dashed box for lobby and cafe - full width, inset from property line -->
+  <rect x="1" y="110" width="43" height="9" fill="none" stroke="green" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="22.5" y="115.5" font-size="4" text-anchor="middle">Bathroom, Lobby, Cafe</text>
+  
+  <!-- Viewing platform around Court 1 - two concentric rectangles -->
+  <rect x="9" y="121.5" width="27" height="17" fill="none" stroke="orange" stroke-width="0.7" stroke-dasharray="1,1"/>
+  <rect x="10" y="122.5" width="25" height="15" fill="none" stroke="orange" stroke-width="0.7" stroke-dasharray="1,1"/>
+  <text x="22.5" y="121" font-size="2.5" text-anchor="middle">Viewing Platform</text>
+  
+  <!-- Social areas to the left and right of Court 1 -->
+  <rect x="2" y="120" width="8" height="20" fill="none" stroke="purple" stroke-width="0.7" stroke-dasharray="2,1"/>
+  <rect x="35" y="120" width="8" height="20" fill="none" stroke="purple" stroke-width="0.7" stroke-dasharray="2,1"/>
+  <text x="6" y="130" font-size="2.5" text-anchor="middle">Social</text>
+  <text x="6" y="133" font-size="2.5" text-anchor="middle">+ Seating</text>
+  <text x="39" y="130" font-size="2.5" text-anchor="middle">Social</text>
+  <text x="39" y="133" font-size="2.5" text-anchor="middle">+ Seating</text>
+  
+  <!-- Rotated courts (20m x 10m) - all horizontal orientation -->
+  <!-- Court 1 (standalone at top) -->
+  <rect x="12.5" y="125" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <text x="22.5" y="130" font-size="3" text-anchor="middle">Court 1</text>
+  <text x="22.5" y="133" font-size="2.5" text-anchor="middle">Center Court</text>
+  
+  <!-- Courts 2-5 in 2x2 formation below Court 1 -->
+  <!-- Row 1 (2-3) -->
+  <rect x="1" y="141" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <rect x="24" y="141" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <text x="11" y="146" font-size="3" text-anchor="middle">Court 2</text>
+  <text x="34" y="146" font-size="3" text-anchor="middle">Court 3</text>
+  
+  <!-- Row 2 (4-5) -->
+  <rect x="1" y="154" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <rect x="24" y="154" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <text x="11" y="159" font-size="3" text-anchor="middle">Court 4</text>
+  <text x="34" y="159" font-size="3" text-anchor="middle">Court 5</text>
+  
+  <!-- Row 3 (6-7) -->
+  <rect x="1" y="167" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <rect x="24" y="167" width="20" height="10" fill="none" stroke="blue" stroke-width="0.7"/>
+  <text x="11" y="172" font-size="3" text-anchor="middle">Court 6</text>
+  <text x="34" y="172" font-size="3" text-anchor="middle">Court 7</text>
+  
+  <!-- Main property dimension labels -->
+  <text x="22.5" y="189" font-size="5" text-anchor="middle">45m</text>
+  <text x="-7" y="90" transform="rotate(270 -7 90)" font-size="5" text-anchor="middle">179m</text>
+  <text x="4" y="-7" font-size="5" text-anchor="middle">8m</text>
+  <text x="13" y="40.5" transform="rotate(270 13 40.5)" font-size="5" text-anchor="middle">81m</text>
+  <text x="52" y="130" transform="rotate(270 52 130)" font-size="5" text-anchor="middle">97.9m</text>
+  <text x="26.3" y="78" font-size="5" text-anchor="middle">36.6m</text>
+  <text x="4" y="40.5" transform="rotate(270 4 40.5)" font-size="4" text-anchor="middle">Driveway</text>
+</svg>
