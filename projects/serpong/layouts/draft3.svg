@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 1100 2050">
+  <!-- Main property outline -->
+  <polygon points="450,1790 0,1790 0,0 80,0 80,810 446,810 450,1790" fill="none" stroke="red" stroke-width="15"/>
+  
+  <!-- Grey dashed box - parking (reduced to match 4 courts) -->
+  <rect x="10" y="820" width="430" height="350" fill="none" stroke="grey" stroke-width="10" stroke-dasharray="30,20"/>
+  
+  <!-- Parking spaces (4 rows of 10 spaces = 40 cars) -->
+  <!-- Row 1 -->
+  <rect x="75" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="110" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="145" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="180" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="215" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="250" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="285" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="320" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="355" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="390" y="840" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  
+  <!-- Row 2 -->
+  <rect x="75" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="110" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="145" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="180" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="215" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="250" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="285" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="320" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="355" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="390" y="920" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+
+  <!-- Row 3 -->
+  <rect x="75" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="110" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="145" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="180" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="215" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="250" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="285" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="320" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="355" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="390" y="1000" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  
+  <!-- Row 4 -->
+  <rect x="75" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="110" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="145" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="180" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="215" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="250" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="285" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="320" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="355" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  <rect x="390" y="1080" width="25" height="50" fill="none" stroke="grey" stroke-width="3"/>
+  
+  <!-- Green box (Social Area / Cafe) - ROTATED 90° and centered, height aligned with courts -->
+  <rect x="175" y="1300" width="100" height="450" fill="none" stroke="green" stroke-width="10" stroke-dasharray="30,20"/>
+  <text x="225" y="1525" font-size="35" text-anchor="middle" transform="rotate(90 225 1525)">Social Area / Cafe</text>
+  
+  <!-- New Orange box (Lobby / Bathrooms) - Horizontal between parking and courts -->
+  <rect x="10" y="1170" width="430" height="100" fill="none" stroke="orange" stroke-width="10" stroke-dasharray="30,20"/>
+  <text x="225" y="1225" font-size="35" text-anchor="middle">Lobby / Bathrooms</text>
+  
+  <!-- Left Side Courts (2 courts, vertical 10m x 20m) -->
+  <!-- Left Top Court -->
+  <rect x="30" y="1300" width="100" height="200" fill="none" stroke="blue" stroke-width="7"/>
+  <text x="80" y="1400" font-size="30" text-anchor="middle">Court 1</text>
+  
+  <!-- Left Bottom Court -->
+  <rect x="30" y="1550" width="100" height="200" fill="none" stroke="blue" stroke-width="7"/>
+  <text x="80" y="1650" font-size="30" text-anchor="middle">Court 2</text>
+  
+  <!-- Right Side Courts (2 courts, vertical 10m x 20m) -->
+  <!-- Right Top Court -->
+  <rect x="320" y="1300" width="100" height="200" fill="none" stroke="blue" stroke-width="7"/>
+  <text x="370" y="1400" font-size="30" text-anchor="middle">Court 3</text>
+  
+  <!-- Right Bottom Court -->
+  <rect x="320" y="1550" width="100" height="200" fill="none" stroke="blue" stroke-width="7"/>
+  <text x="370" y="1650" font-size="30" text-anchor="middle">Court 4</text>
+  
+  <!-- Main property dimension labels -->
+  <text x="225" y="1850" font-size="50" text-anchor="middle">45m</text>
+  <text x="-70" y="900" transform="rotate(270 -70 900)" font-size="50" text-anchor="middle">179m</text>
+  <text x="40" y="-30" font-size="50" text-anchor="middle">8m</text>
+  <text x="130" y="405" transform="rotate(270 130 405)" font-size="50" text-anchor="middle">81m</text>
+  <text x="520" y="1300" transform="rotate(270 520 1300)" font-size="50" text-anchor="middle">97.9m</text>
+  <text x="263" y="780" font-size="50" text-anchor="middle">36.6m</text>
+  <text x="40" y="405" transform="rotate(270 40 405)" font-size="40" text-anchor="middle">Driveway</text>
+  
+  <!-- LEGEND SECTION -->
+  <rect x="550" y="200" width="600" height="1350" fill="none" stroke="black" stroke-width="5"/>
+  <text x="850" y="300" font-size="50" text-anchor="middle" font-weight="bold">LEGEND</text>
+  
+  <!-- Property outline legend -->
+  <line x1="600" y1="400" x2="680" y2="400" stroke="red" stroke-width="15"/>
+  <text x="780" y="420" font-size="35" text-anchor="left">Property Line</text>
+  
+  <!-- Parking legend -->
+  <line x1="600" y1="500" x2="680" y2="500" stroke="grey" stroke-width="10" stroke-dasharray="30,20"/>
+  <text x="780" y="520" font-size="35" text-anchor="left">Parking Area</text>
+  <text x="780" y="565" font-size="30" text-anchor="left">(43m × 35m, 40 cars)</text>
+  <text x="780" y="610" font-size="30" text-anchor="left">Single space: 2.5m × 5m</text>
+  <text x="780" y="655" font-size="30" text-anchor="left">(Indonesian standard)</text>
+  
+  <!-- Lobby legend -->
+  <line x1="600" y1="740" x2="680" y2="740" stroke="orange" stroke-width="10" stroke-dasharray="30,20"/>
+  <text x="780" y="760" font-size="35" text-anchor="left">Lobby / Bathrooms</text>
+  <text x="780" y="805" font-size="30" text-anchor="left">(43m × 10m)</text>
+  
+  <!-- Social area legend -->
+  <line x1="600" y1="890" x2="680" y2="890" stroke="green" stroke-width="10" stroke-dasharray="30,20"/>
+  <text x="780" y="910" font-size="35" text-anchor="left">Social Area / Cafe</text>
+  <text x="780" y="955" font-size="30" text-anchor="left">(10m × 45m)</text>
+  
+  <!-- Courts legend -->
+  <line x1="600" y1="1040" x2="680" y2="1040" stroke="blue" stroke-width="7"/>
+  <text x="780" y="1060" font-size="35" text-anchor="left">Pádel Court</text>
+  <text x="780" y="1105" font-size="30" text-anchor="left">All courts: 10m × 20m</text>
+  <text x="780" y="1150" font-size="30" text-anchor="left">Standard size for pádel</text>
+  
+  <!-- Total facility information -->
+  <text x="850" y="1270" font-size="35" text-anchor="middle">Total: 4 Pádel Courts</text>
+  <text x="850" y="1320" font-size="30" text-anchor="middle">All vertical orientation</text>
+  <text x="850" y="1370" font-size="30" text-anchor="middle">Villa Melati Mas, Serpong</text>
+</svg>
